@@ -2,20 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage ('Verify Branch'){
             steps {
-                echo 'Hello From Neha'
+                echo "$GIT_BRANCH"
             }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing something new'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'and is successful'
-            }
+
         }
     }
+
+    
+    
 }
+
