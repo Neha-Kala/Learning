@@ -9,8 +9,8 @@ pipeline {
         }
         stage('Docker Build'){
             steps{
-                pwsh(script: 'docker images -a')
-                pwsh(script: """
+                cmd(script: 'docker images -a')
+                cmd(script: """
                 cd C/Users/Neha Kala/Desktop/Dockerfiles/DF/
                 docker images -a
                 docker build -t jenkins-pipeline .
